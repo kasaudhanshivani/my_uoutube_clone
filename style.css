@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto, Arial;
+}
+
+/* HEADER */
+.header {
+    height: 56px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+    border-bottom: 1px solid #ddd;
+}
+
+.left-section,
+.middle-section,
+.right-section {
+    display: flex;
+    align-items: center;
+}
+
+.hamburger-menu {
+    height: 24px;
+    margin-right: 24px;
+    cursor: pointer;
+}
+
+.youtube-logo {
+    height: 20px;
+}
+
+/* SEARCH */
+.middle-section {
+    flex: 1;
+    max-width: 500px;
+}
+
+.search-bar {
+    flex: 1;
+    height: 36px;
+    padding-left: 10px;
+    border: 1px solid #ccc;
+}
+
+.search-button {
+    width: 64px;
+    height: 36px;
+    border: 1px solid #ccc;
+    background: #f8f8f8;
+    cursor: pointer;
+}
+
+.voice-search-button {
+    width: 36px;
+    height: 36px;
+    margin-left: 8px;
+    border-radius: 50%;
+    border: none;
+    background: #f8f8f8;
+    cursor: pointer;
+}
+
+/* RIGHT */
+.right-section {
+    width: 160px;
+    justify-content: space-between;
+}
+
+.current-user-picture {
+    height: 32px;
+    border-radius: 50%;
+}
+
+/* VIDEO GRID */
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    padding: 20px;
+}
+
+.thumbnail {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.video-info-grid {
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    margin-top: 12px;
+}
+
+.profile-picture {
+    width: 36px;
+    border-radius: 50%;
+}
+
+.video-title {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 6px;
+}
+
+.video-author,
+.video-stats {
+    font-size: 12px;
+    color: #606060;
+}/* DARK MODE */
+/* Default (Light Mode) */
+.page {
+    --bg: #ffffff;
+    --text: #000000;
+    --header: #ffffff;
+    --card-text: #606060;
+
+    background-color: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+}
+
+/* Dark Mode */
+#dark-toggle:checked~.page {
+    --bg: #0f0f0f;
+    --text: #ffffff;
+    --header: #181818;
+    --card-text: #aaaaaa;
+}
+
+/* Apply variables */
+.header {
+    background-color: var(--header);
+}
+
+.video-author,
+.video-stats {
+    color: var(--card-text);
+}
+
+/* Toggle Button */
+.theme-btn {
+    position: fixed;
+    top: 14px;
+    right: 20px;
+    cursor: pointer;
+    font-size: 20px;
+    z-index: 1000;
+}
+.thumbnail-row {
+    position: relative;
+}
+
+.video-time {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    font-size: 12px;
+    padding: 2px 4px;
+    border-radius: 2px;
+    font-weight: 500;
+}
