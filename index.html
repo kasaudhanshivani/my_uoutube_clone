@@ -10,104 +10,394 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-<input type="checkbox" id="dark-toggle" hidden>
+    <input type="checkbox" id="dark-toggle" hidden>
 
-<label for="dark-toggle" class="theme-btn">🌙</label>
+    <label for="dark-toggle" class="theme-btn" title="Toggle Dark Mode">
+        <i class="fa-solid fa-moon"></i>
+    </label>
 
-<div class="page">
-    <!-- PUT YOUR ENTIRE YOUTUBE CLONE HERE -->
+    <div class="page">
+
         <!-- HEADER -->
         <div class="header">
+
+            <!-- LEFT -->
             <div class="left-section">
-                <img src="icons/menu.svg" class="hamburger-menu">
-                <img src="icons/youtube-logo.svg" class="youtube-logo">
+                <i class="fa-solid fa-bars hamburger-menu"></i>
+                <div class="youtube-logo">
+                    <i class="fa-brands fa-youtube" style="color:#ff0000; font-size:28px;"></i>
+                    <span class="logo-text">YouTube</span>
+                </div>
             </div>
-        
+
+            <!-- MIDDLE -->
             <div class="middle-section">
                 <input type="text" class="search-bar" placeholder="Search">
                 <button class="search-button">
-                    <img src="icons/search.svg">
+                    <i class="fa-solid fa-magnifying-glass"></i>
                 </button>
                 <button class="voice-search-button">
-                    <img src="icons/voice-search-icon.svg">
+                    <i class="fa-solid fa-microphone"></i>
                 </button>
             </div>
-        
+
+            <!-- RIGHT -->
             <div class="right-section">
-                <img src="icons/upload.svg">
-        
-        
-                <img src="icons/notification.svg">
-                <img src="thumbnail/image copy 4.png" class="current-user-picture">
+                <button class="icon-button" title="Create">
+                    <i class="fa-solid fa-video"></i>
+                </button>
+                <button class="icon-button" title="Notifications">
+                    <i class="fa-solid fa-bell"></i>
+                    <span class="notif-badge">3</span>
+                </button>
+                <div class="avatar">S</div>
+            </div>
+
+        </div>
+
+        <!-- CATEGORY BAR -->
+        <div class="category-bar">
+            <button class="category-btn active">All</button>
+            <button class="category-btn">Music</button>
+            <button class="category-btn">Gaming</button>
+            <button class="category-btn">News</button>
+            <button class="category-btn">Live</button>
+            <button class="category-btn">Coding</button>
+            <button class="category-btn">Comedy</button>
+            <button class="category-btn">Sports</button>
+            <button class="category-btn">Tech</button>
+            <button class="category-btn">Education</button>
+        </div>
+
+        <!-- BODY -->
+        <div class="body">
+
+            <!-- SIDEBAR -->
+            <div class="sidebar">
+
+                <div class="sidebar-section">
+                    <div class="sidebar-item active">
+                        <i class="fa-solid fa-house sidebar-icon"></i>
+                        <span>Home</span>
+                    </div>
+                    <div class="sidebar-item">
+                        <i class="fa-solid fa-compass sidebar-icon"></i>
+                        <span>Explore</span>
+                    </div>
+                    <div class="sidebar-item">
+                        <i class="fa-solid fa-list sidebar-icon"></i>
+                        <span>Subscriptions</span>
+                    </div>
+                </div>
+
+                <div class="sidebar-divider"></div>
+
+                <div class="sidebar-section">
+                    <div class="sidebar-item">
+                        <i class="fa-solid fa-folder sidebar-icon"></i>
+                        <span>Library</span>
+                    </div>
+                    <div class="sidebar-item">
+                        <i class="fa-solid fa-clock-rotate-left sidebar-icon"></i>
+                        <span>History</span>
+                    </div>
+                    <div class="sidebar-item">
+                        <i class="fa-solid fa-play sidebar-icon"></i>
+                        <span>Your Videos</span>
+                    </div>
+                    <div class="sidebar-item">
+                        <i class="fa-solid fa-clock sidebar-icon"></i>
+                        <span>Watch Later</span>
+                    </div>
+                    <div class="sidebar-item">
+                        <i class="fa-solid fa-thumbs-up sidebar-icon"></i>
+                        <span>Liked Videos</span>
+                    </div>
+                </div>
+
+                <div class="sidebar-divider"></div>
+
+                <div class="sidebar-section">
+                    <p class="sidebar-title">SUBSCRIPTIONS</p>
+                    <div class="sidebar-item">
+                        <div class="sub-avatar" style="background:#e74c3c">M</div>
+                        <span>Marques Brownlee</span>
+                    </div>
+                    <div class="sidebar-item">
+                        <div class="sub-avatar" style="background:#9b59b6">M</div>
+                        <span>Markiplier</span>
+                    </div>
+                    <div class="sidebar-item">
+                        <div class="sub-avatar" style="background:#2ecc71">S</div>
+                        <span>SSSniperWolf</span>
+                    </div>
+                    <div class="sidebar-item">
+                        <div class="sub-avatar" style="background:#3498db">D</div>
+                        <span>Dream</span>
+                    </div>
+                    <div class="sidebar-item">
+                        <div class="sub-avatar" style="background:#f39c12">N</div>
+                        <span>NeetCode</span>
+                    </div>
+                </div>
+
+                <div class="sidebar-divider"></div>
+
+                <div class="sidebar-section">
+                    <p class="sidebar-title">EXPLORE</p>
+                    <div class="sidebar-item">
+                        <i class="fa-solid fa-fire sidebar-icon"></i>
+                        <span>Trending</span>
+                    </div>
+                    <div class="sidebar-item">
+                        <i class="fa-solid fa-music sidebar-icon"></i>
+                        <span>Music</span>
+                    </div>
+                    <div class="sidebar-item">
+                        <i class="fa-solid fa-gamepad sidebar-icon"></i>
+                        <span>Gaming</span>
+                    </div>
+                    <div class="sidebar-item">
+                        <i class="fa-solid fa-newspaper sidebar-icon"></i>
+                        <span>News</span>
+                    </div>
+                    <div class="sidebar-item">
+                        <i class="fa-solid fa-trophy sidebar-icon"></i>
+                        <span>Sports</span>
+                    </div>
+                </div>
+
+                <div class="sidebar-divider"></div>
+
+                <div class="sidebar-section">
+                    <div class="sidebar-item">
+                        <i class="fa-solid fa-gear sidebar-icon"></i>
+                        <span>Settings</span>
+                    </div>
+                    <div class="sidebar-item">
+                        <i class="fa-solid fa-flag sidebar-icon"></i>
+                        <span>Report History</span>
+                    </div>
+                    <div class="sidebar-item">
+                        <i class="fa-solid fa-circle-question sidebar-icon"></i>
+                        <span>Help</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- VIDEO GRID -->
+            <div class="video-grid">
+
+                <!-- VIDEO 1 -->
+                <div class="video-preview">
+                    <div class="thumbnail-row">
+                        <img src="thumbnail/image copy 2.png" class="thumbnail">
+                        <div class="video-time">14:32</div>
+                    </div>
+                    <div class="video-info-grid">
+                        <div class="profile-avatar" style="background:#e74c3c">M</div>
+                        <div class="video-info">
+                            <p class="video-title">Talking Tech and AI with Google CEO Sundar Pichai!</p>
+                            <p class="video-author">Marques Brownlee</p>
+                            <p class="video-stats">3.4M views · 6 months ago</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- VIDEO 2 -->
+                <div class="video-preview">
+                    <div class="thumbnail-row">
+                        <img src="thumbnail/image copy 2.png" class="thumbnail">
+                        <div class="video-time">10:15</div>
+                    </div>
+                    <div class="video-info-grid">
+                        <div class="profile-avatar" style="background:#9b59b6">M</div>
+                        <div class="video-info">
+                            <p class="video-title">Try Not To Laugh Challenge #9</p>
+                            <p class="video-author">Markiplier</p>
+                            <p class="video-stats">19M views · 4 years ago</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- VIDEO 3 -->
+                <div class="video-preview">
+                    <div class="thumbnail-row">
+                        <img src="thumbnail/image copy 2.png" class="thumbnail">
+                        <div class="video-time">8:47</div>
+                    </div>
+                    <div class="video-info-grid">
+                        <div class="profile-avatar" style="background:#2ecc71">S</div>
+                        <div class="video-info">
+                            <p class="video-title">Crazy Tik Toks Taken Moments Before Disaster</p>
+                            <p class="video-author">SSSniperWolf</p>
+                            <p class="video-stats">12M views · 1 year ago</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- VIDEO 4 -->
+                <div class="video-preview">
+                    <div class="thumbnail-row">
+                        <img src="thumbnail/image copy 2.png" class="thumbnail">
+                        <div class="video-time">22:10</div>
+                    </div>
+                    <div class="video-info-grid">
+                        <div class="profile-avatar" style="background:#3498db">D</div>
+                        <div class="video-info">
+                            <p class="video-title">I Spent 100 Days in Minecraft Hardcore</p>
+                            <p class="video-author">Dream</p>
+                            <p class="video-stats">45M views · 2 years ago</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- VIDEO 5 -->
+                <div class="video-preview">
+                    <div class="thumbnail-row">
+                        <img src="thumbnail/image copy 2.png" class="thumbnail">
+                        <div class="video-time">18:05</div>
+                    </div>
+                    <div class="video-info-grid">
+                        <div class="profile-avatar" style="background:#e74c3c">M</div>
+                        <div class="video-info">
+                            <p class="video-title">iPhone 16 Pro Max Full Review — Best iPhone Ever Made?</p>
+                            <p class="video-author">Marques Brownlee</p>
+                            <p class="video-stats">8.1M views · 3 months ago</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- VIDEO 6 -->
+                <div class="video-preview">
+                    <div class="thumbnail-row">
+                        <img src="thumbnail/image copy 2.png" class="thumbnail">
+                        <div class="video-time">12:30</div>
+                    </div>
+                    <div class="video-info-grid">
+                        <div class="profile-avatar" style="background:#1abc9c">B</div>
+                        <div class="video-info">
+                            <p class="video-title">World's Largest Nerf Gun Battle!</p>
+                            <p class="video-author">MrBeast</p>
+                            <p class="video-stats">67M views · 1 year ago</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- VIDEO 7 -->
+                <div class="video-preview">
+                    <div class="thumbnail-row">
+                        <img src="thumbnail/image copy 2.png" class="thumbnail">
+                        <div class="video-time">9:58</div>
+                    </div>
+                    <div class="video-info-grid">
+                        <div class="profile-avatar" style="background:#e67e22">F</div>
+                        <div class="video-info">
+                            <p class="video-title">Top 10 Programming Languages in 2024</p>
+                            <p class="video-author">Fireship</p>
+                            <p class="video-stats">5.2M views · 8 months ago</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- VIDEO 8 -->
+                <div class="video-preview">
+                    <div class="thumbnail-row">
+                        <img src="thumbnail/image copy 2.png" class="thumbnail">
+                        <div class="video-time">25:44</div>
+                    </div>
+                    <div class="video-info-grid">
+                        <div class="profile-avatar" style="background:#f39c12">N</div>
+                        <div class="video-info">
+                            <p class="video-title">Learning DSA in 30 Days — Full Roadmap</p>
+                            <p class="video-author">NeetCode</p>
+                            <p class="video-stats">2.8M views · 5 months ago</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- VIDEO 9 -->
+                <div class="video-preview">
+                    <div class="thumbnail-row">
+                        <img src="thumbnail/image copy 2.png" class="thumbnail">
+                        <div class="video-time">33:21</div>
+                    </div>
+                    <div class="video-info-grid">
+                        <div class="profile-avatar" style="background:#c0392b">V</div>
+                        <div class="video-info">
+                            <p class="video-title">I Built a Full Stack App in 24 Hours</p>
+                            <p class="video-author">Theo</p>
+                            <p class="video-stats">1.1M views · 2 months ago</p>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
-        
-        <!-- VIDEO GRID -->
-        <div class="video-grid">
-        
-            <!-- VIDEO 1 -->
-            <div class="video-preview">
-                <div class="thumbnail-row">
-                    <img src="thumbnail/image copy 2.png" class="thumbnail">
-                    <div class="video-time">14:32</div>
-                </div>
-                <div class="video-info-grid">
-                    <img src="thumbnail/image copy 4.png" class="profile-picture">
-        
-                    <div class="video-info">
-                        <p class="video-title">Talking Tech and AI with Google CEO Sundar Pichai!</p>
-                        <p class="video-author">Marques Brownlee</p>
-                        <p class="video-stats">3.4M views · 6 months ago</p>
-                    </div>
-                </div>
-            </div>
-        
-            <!-- VIDEO 2 -->
-            <div class="video-preview">
-                <div class="thumbnail-row">
-                    <img src="thumbnail/image copy 2.png" class="thumbnail">
-                    <div class="video-time">14:32</div>
-                </div>
-                <div class="video-info-grid">
-                    <img src="image copy 4.png" class="profile-picture">
-        
-                    <div class="video-info">
-                        <p class="video-title">Try Not To Laugh Challenge #9</p>
-                        <p class="video-author">Markiplier</p>
-                        <p class="video-stats">19M views · 4 years ago</p>
-                    </div>
-                </div>
-            </div>
-        
-            <!-- VIDEO 3 -->
-            <div class="video-preview">
-                <div class="thumbnail-row">
-                    <img src="thumbnail/image copy 2.png" class="thumbnail">
-                    <div class="video-time">14:32</div>
-                </div>
-                <div class="video-info-grid">
-                    <img src="thumbnail/image copy 4.png" class="profile-picture">
-        
-                    <div class="video-info">
-                        <p class="video-title">Crazy Tik Toks Taken Moments Before Disaster</p>
-                        <p class="video-author">SSSniperWolf</p>
-                        <p class="video-stats">12M views · 1 year ago</p>
-                    </div>
-                </div>
-            </div>
-        
-        </div>
-</div>
+
+    </div>
 
 
-    <!-- HEADER -->
-   
+    <script>
+        const hamburger = document.querySelector(".hamburger-menu");
+        const sidebar = document.querySelector(".sidebar");
+
+        hamburger.addEventListener("click", () => {
+            sidebar.classList.toggle("hide-sidebar");
+        });
 
 
+
+        const searchInput = document.querySelector(".search-bar");
+            const videos = document.querySelectorAll(".video-preview");
+
+            searchInput.addEventListener("keyup", () => {
+                const searchValue = searchInput.value.toLowerCase();
+
+                videos.forEach(video => {
+                    const title = video.querySelector(".video-title").innerText.toLowerCase();
+
+                    if (title.includes(searchValue)) {
+                        video.style.display = "block";
+                    } else {
+                        video.style.display = "none";
+                    }
+                });
+            });
+
+
+            const categoryBtns = document.querySelectorAll(".category-btn");
+
+                categoryBtns.forEach(btn => {
+                    btn.addEventListener("click", () => {
+                        document.querySelector(".category-btn.active").classList.remove("active");
+                        btn.classList.add("active");
+                    });
+                });
+
+
+                const thumbnails = document.querySelectorAll(".thumbnail");
+
+                    thumbnails.forEach((thumb, index) => {
+                        thumb.addEventListener("click", () => {
+                            const title = thumb.closest(".video-preview")
+                                .querySelector(".video-title").innerText;
+                            alert("Playing: " + title);
+                        });
+                    });
+
+
+
+                    
+    </script>
 </body>
 
 </html>
