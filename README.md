@@ -14,8 +14,9 @@ A static YouTube homepage clone built using **HTML and CSS only**.
 - CSS3 (Flexbox & Grid)
 
 ## 📸 Preview
-(Add screenshots here)
+[( here)](https://kasaudhanshivani.github.io/my_uoutube_clone/)
 
 ## 📁 Project Structure
 ﻿# my_uoutube_clone
+
 
